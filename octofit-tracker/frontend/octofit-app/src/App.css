@@ -1,0 +1,104 @@
+
+body {
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #2d3a4a;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 60px;
+  margin-right: 16px;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  border-radius: 8px;
+}
+.navbar-brand {
+  color: #fff !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  color: #f3f3f3 !important;
+  margin-right: 12px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #ffd700 !important;
+}
+
+h2, .navbar-brand {
+  color: #4e54c8;
+}
+
+ul {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.08);
+}
+li {
+  color: #2d3a4a;
+  margin-bottom: 8px;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  margin: 8px 0;
+  transition: background 0.2s;
+}
+button:hover, .btn:hover {
+  background: #ffd700;
+  color: #4e54c8;
+}
+
+table {
+  background: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.08);
+  margin: 16px 0;
+}
+th {
+  background: #4e54c8;
+  color: #fff;
+}
+td {
+  color: #2d3a4a;
+}
+
+.App-header {
+  background-color: #8f94fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.App-link {
+  color: #ffd700;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
