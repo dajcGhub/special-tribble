@@ -9,7 +9,7 @@ const Activities = () => {
     fetch(endpoint)
       .then(res => res.json())
       .then(data => {
-        const results = data.results || data;
+        const results = Array.isArray(data) ? data : (data.results || []);
         setActivities(results);
         console.log('Activities endpoint:', endpoint);
         console.log('Fetched activities:', results);
@@ -19,7 +19,7 @@ const Activities = () => {
 
   return (
     <div>
-      <h2 className="mb-4">Activities <a href="https://reactjs.org" className="btn btn-link">Learn React</a></h2>
+      <h2 className="mb-4 card-title">Activities <a href="https://reactjs.org" className="btn btn-link">Learn React</a></h2>
       <div className="card mb-4">
         <div className="card-body">
           <form className="mb-3">
@@ -31,7 +31,7 @@ const Activities = () => {
           </form>
           <button className="btn btn-info mb-3" onClick={() => setShowModal(true)}>Show Modal</button>
           <table className="table table-striped table-bordered">
-            <thead>
+            <thead className="thead-dark">
               <tr>
                 <th>#</th>
                 <th>Name</th>
@@ -58,6 +58,17 @@ const Activities = () => {
               <div className="modal-header">
                 <h5 className="modal-title">Activity Modal</h5>
                 <button type="button" className="close btn btn-danger" onClick={() => setShowModal(false)}>&times;</button>
+              </div>
+              <div className="modal-body">
+                <p>Detalles de la actividad.</p>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
               </div>
               <div className="modal-body">
                 <p>This is a Bootstrap modal example for Activities.</p>
