@@ -37,7 +37,7 @@ function App() {
           <Route path="/users" element={<Users />} />
           <Route path="/workouts" element={<Workouts />} />
           <Route path="/" element={
-            <div>
+            <>
               <div className="card mb-4">
                 <div className="card-body">
                   <h2 className="card-title">Bienvenido a Octofit Tracker</h2>
@@ -63,39 +63,7 @@ function App() {
                   </div>
                 </div>
               )}
-            </div>
-          } />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
-
-export default App;
-                  <h2 className="card-title">Bienvenido a Octofit Tracker</h2>
-                  <p className="card-text">Tu app de fitness para equipos, actividades, leaderboard y más.</p>
-                  <button className="btn btn-info" onClick={() => setShowModal(true)}>Mostrar Modal Global</button>
-                </div>
-              </div>
-              {showModal && (
-                <div className="modal show d-block" tabIndex="-1" role="dialog">
-                  <div className="modal-dialog" role="document">
-                    <div className="modal-content">
-                      <div className="modal-header">
-                        <h5 className="modal-title">Modal Global</h5>
-                        <button type="button" className="close btn btn-danger" onClick={() => setShowModal(false)}>&times;</button>
-                      </div>
-                      <div className="modal-body">
-                        <p>¡Este es un ejemplo de modal global en la página principal!</p>
-                      </div>
-                      <div className="modal-footer">
-                        <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Cerrar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
+            </>
           } />
         </Routes>
       </div>
