@@ -1,13 +1,8 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Activities from './components/Activities';
-import Leaderboard from './components/Leaderboard';
-import Teams from './components/Teams';
-import Users from './components/Users';
-import Workouts from './components/Workouts';
-import logo from '../public/logo192.png';
+
+import React, { useState } from 'react';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <Router>
       <div className="container mt-4">
@@ -32,7 +27,35 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/users" element={<Users />} />
           <Route path="/workouts" element={<Workouts />} />
-          <Route path="/" element={<div>Bienvenido a Octofit Tracker</div>} />
+          <Route path="/" element={
+            <div>
+              <div className="card mb-4">
+                <div className="card-body">
+                  <h2 className="card-title">Bienvenido a Octofit Tracker</h2>
+                  <p className="card-text">Tu app de fitness para equipos, actividades, leaderboard y más.</p>
+                  <button className="btn btn-info" onClick={() => setShowModal(true)}>Mostrar Modal Global</button>
+                </div>
+              </div>
+              {showModal && (
+                <div className="modal show d-block" tabIndex="-1" role="dialog">
+                  <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                      <div className="modal-header">
+                        <h5 className="modal-title">Modal Global</h5>
+                        <button type="button" className="close btn btn-danger" onClick={() => setShowModal(false)}>&times;</button>
+                      </div>
+                      <div className="modal-body">
+                        <p>¡Este es un ejemplo de modal global en la página principal!</p>
+                      </div>
+                      <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Cerrar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          } />
         </Routes>
       </div>
     </Router>
