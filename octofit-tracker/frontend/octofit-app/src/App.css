@@ -2,6 +2,7 @@
 body {
   background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
   color: #2d3a4a;
+  min-height: 100vh;
 }
 
 .App {
@@ -11,12 +12,22 @@ body {
 .App-logo {
   height: 60px;
   margin-right: 16px;
+  float: left;
+  display: inline-block;
+}
+
+.octofitapp-small {
+  height: 40px;
+  margin-right: 12px;
+  float: left;
+  display: inline-block;
 }
 
 .navbar {
   background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
   color: #fff;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.15);
 }
 .navbar-brand {
   color: #fff !important;
@@ -26,17 +37,86 @@ body {
   align-items: center;
 }
 .nav-link {
-  color: #f3f3f3 !important;
+  color: #ffd700 !important;
   margin-right: 12px;
   font-weight: 500;
   transition: color 0.2s;
 }
 .nav-link:hover {
-  color: #ffd700 !important;
+  color: #ff5e62 !important;
 }
 
 h2, .navbar-brand {
   color: #4e54c8;
+}
+
+table {
+  background: #f7f9fa;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(78,84,200,0.08);
+}
+th {
+  background: #8f94fb !important;
+  color: #fff !important;
+}
+tr:nth-child(even) {
+  background: #e0eafc;
+}
+tr:nth-child(odd) {
+  background: #cfdef3;
+}
+
+.btn-primary {
+  background: #4e54c8;
+  border-color: #4e54c8;
+}
+.btn-info {
+  background: #ff5e62;
+  border-color: #ff5e62;
+}
+.btn-secondary {
+  background: #cfdef3;
+  border-color: #cfdef3;
+  color: #4e54c8;
+}
+.btn-danger {
+  background: #ff5e62;
+  border-color: #ff5e62;
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.12);
+  background: #fff;
+}
+.card-title {
+  color: #ff5e62;
+}
+.card-text {
+  color: #2d3a4a;
+}
+
+a.btn-link {
+  color: #4e54c8 !important;
+  font-weight: bold;
+}
+a.btn-link:hover {
+  color: #ff5e62 !important;
+}
+
+.modal-content {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.18);
+}
+.modal-header {
+  background: #8f94fb;
+  color: #fff;
+}
+.modal-title {
+  color: #ffd700;
+}
+.modal-footer {
+  background: #e0eafc;
 }
 
 ul {
